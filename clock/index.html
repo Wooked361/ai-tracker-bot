@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕐 Digital Clock</h1>
+            <p class="subtitle">View current time across multiple time zones</p>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="timezoneSearch" 
+                    placeholder="Search time zone (e.g., 'New York', 'Tokyo')..."
+                    class="search-input"
+                >
+                <button id="addTimezoneBtn" class="btn-primary">Add Time Zone</button>
+            </div>
+            <div class="format-controls">
+                <label>
+                    <input type="checkbox" id="format24h" checked>
+                    24-Hour Format
+                </label>
+                <label>
+                    <input type="checkbox" id="showSeconds" checked>
+                    Show Seconds
+                </label>
+            </div>
+        </div>
+
+        <div class="clocks-grid" id="clocksGrid">
+            <!-- Clocks will be dynamically added here -->
+        </div>
+
+        <div class="presets">
+            <h3>Quick Presets</h3>
+            <div class="preset-buttons">
+                <button class="preset-btn" data-zones='["America/New_York", "Europe/London", "Asia/Tokyo"]'>Global</button>
+                <button class="preset-btn" data-zones='["America/Los_Angeles", "America/Denver", "America/Chicago", "America/New_York"]'>USA</button>
+                <button class="preset-btn" data-zones='["Europe/London", "Europe/Paris", "Europe/Berlin", "Europe/Moscow"]'>Europe</button>
+                <button class="preset-btn" data-zones='["Asia/Tokyo", "Asia/Shanghai", "Asia/Hong_Kong", "Asia/Bangkok"]'>Asia</button>
+                <button class="preset-btn" data-zones='["Australia/Sydney", "Australia/Melbourne", "Pacific/Auckland"]'>Oceania</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="clock.js"></script>
+</body>
+</html>
